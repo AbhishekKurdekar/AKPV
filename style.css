@@ -1,20 +1,20 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #fff0f5;
+  background: linear-gradient(to bottom, #fff0f5, #fde2e4);
   text-align: center;
   overflow-x: hidden;
 }
 
-/* PASSWORD */
+/* LOCK */
 .lock {
   height: 100vh;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #ff758c, #ff7eb3);
-  color: white;
 }
 
 .lock input {
@@ -25,19 +25,20 @@ body {
 }
 
 .lock button {
-  padding: 10px 20px;
-  border: none;
+  padding: 10px 22px;
   border-radius: 8px;
+  border: none;
   cursor: pointer;
 }
 
-/* SECTIONS */
+/* HERO */
 .hero {
   padding: 60px 20px;
-  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  background: linear-gradient(to right, #ff758c, #ffb3c6);
   color: white;
 }
 
+/* SECTIONS */
 .journey, .gallery, .proposal {
   padding: 40px 20px;
 }
@@ -45,30 +46,46 @@ body {
 /* GALLERY */
 .photos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
 }
 
-.photos img {
+.photo-card {
+  position: relative;
+}
+
+.photo-card img {
   width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: transform 0.4s;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
-.photos img:hover {
-  transform: scale(1.08);
+/* CAPTION ON TOUCH / HOVER */
+.caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.65);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  border-radius: 0 0 16px 16px;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.photo-card:hover .caption {
+  opacity: 1;
 }
 
 /* PROPOSAL */
 .proposal {
-  position: relative;
+  background: linear-gradient(to right, #fde2e4, #fadadd);
   height: 300px;
-  background: #ffe6eb;
+  position: relative;
 }
 
 button {
-  padding: 12px 24px;
+  padding: 12px 26px;
   font-size: 18px;
   border-radius: 8px;
   border: none;
@@ -87,13 +104,8 @@ button {
 }
 
 /* ANIMATIONS */
-.fade-in {
-  animation: fade 1.5s ease-in;
-}
-
-.slide-up {
-  animation: slide 1.2s ease-in;
-}
+.fade-in { animation: fade 1.5s ease-in; }
+.slide-up { animation: slide 1.2s ease-in; }
 
 @keyframes fade {
   from { opacity: 0; }
@@ -103,4 +115,16 @@ button {
 @keyframes slide {
   from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* FLOATING HEART */
+.heart {
+  position: fixed;
+  bottom: -10px;
+  font-size: 20px;
+  animation: floatUp 6s linear infinite;
+}
+
+@keyframes floatUp {
+  to { transform: translateY(-110vh); opacity: 0; }
 }
