@@ -18,10 +18,17 @@ function moveNo() {
 
 function yesClick() {
   document.body.innerHTML = `
-    <h1 style="margin-top:20%; color:#ff4d6d;">
-      You are my today, tomorrow & always ❤️<br>
-      Happy Valentine’s Day 💍
-    </h1>
+    <div class="yes-screen">
+      <div class="yes-box">
+        <h1>From Pooja Vernekar 💕</h1>
+        <p style="font-size:28px; margin:15px 0;">⬇️</p>
+        <h1>Pooja Abhishek Kurdekar 💍</h1>
+        <p style="margin-top:20px;">
+          Thank you for choosing me.<br>
+          Today, tomorrow, and all our forever ❤️
+        </p>
+      </div>
+    </div>
   `;
 }
 
