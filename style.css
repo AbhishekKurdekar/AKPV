@@ -128,3 +128,42 @@ button {
 @keyframes floatUp {
   to { transform: translateY(-110vh); opacity: 0; }
 }
+
+/* YES SCREEN */
+.yes-screen {
+  height: 100vh;
+  background: url("yes-bg.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fade 2s ease-in;
+}
+
+.yes-box {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 40px;
+  border-radius: 20px;
+  color: white;
+  animation: slideUp 2s ease-out;
+}
+
+.yes-box h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.yes-box p {
+  font-size: 20px;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
