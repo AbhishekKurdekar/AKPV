@@ -15,17 +15,8 @@ function moveNo() {
   const y = Math.random() * 120;
   no.style.transform = `translate(${x}px, ${y}px)`;
 }
+
 function yesClick() {
-  document.body.innerHTML = `
-    <div id="focusView">
-      <img id="focusImg" src="photos/pic1.jpg">
-      <h2 id="name1">Pooja Vernekar</h2>
-      <h2 id="name2">Abhishek</h2>
-      <h1 id="finalName">Pooja Abhishek Kurdekar 💖</h1>
-    </div>
-  `;
-}
-/*function yesClick() {
   document.body.innerHTML = `
     <div class="yes-screen">
       <div class="yes-box">
@@ -39,7 +30,7 @@ function yesClick() {
       </div>
     </div>
   `;
-}*/
+}
 
 /* Hearts */
 setInterval(() => {
