@@ -1,6 +1,6 @@
 function unlock() {
   const pass = document.getElementById("password").value;
-  if (pass === "04Aug2025") {
+  if (pass === "040825") {
     document.getElementById("lockScreen").style.display = "none";
     document.getElementById("content").style.display = "block";
     document.getElementById("bgMusic").play();
@@ -20,9 +20,9 @@ function yesClick() {
   document.body.innerHTML = `
     <div class="yes-screen">
       <div class="yes-box">
-        <h1>From Pooja Vernekar 💕</h1>
+        <h2>From Pooja Vernekar 💕</h2>
         <p style="font-size:28px; margin:15px 0;">⬇️</p>
-        <h1>Pooja Abhishek Kurdekar 💍</h1>
+        <h3>Pooja Abhishek Kurdekar 💍</h3>
         <p style="margin-top:20px;">
           Thank you for choosing me.<br>
           Today, tomorrow, and all our forever ❤️
